@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="684.0" prefWidth="1066.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.caravanrental.controller.BookingFormController">
+   <children>
+      <Label layoutX="407.0" layoutY="25.0" text="Booking Form">
+         <font>
+            <Font name="Serif Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="109.0" text="Booking ID :">
+         <font>
+            <Font name="Arial Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="708.0" layoutY="109.0" text="Date :">
+         <font>
+            <Font name="Arial Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="168.0" text="Customer ID :">
+         <font>
+            <Font name="Arial Bold" size="25.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCustomerId" layoutX="237.0" layoutY="171.0" onAction="#cmbCustomerIdOnAction" prefHeight="26.0" prefWidth="92.0" />
+      <Label fx:id="txtBookingId" layoutX="221.0" layoutY="109.0" prefHeight="30.0" prefWidth="147.0" textFill="#005bff">
+         <font>
+            <Font name="Arial Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtDate" layoutX="785.0" layoutY="109.0" prefHeight="30.0" prefWidth="208.0" textFill="RED">
+         <font>
+            <Font name="Arial Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtCustomerName" layoutX="376.0" layoutY="170.0" prefHeight="30.0" prefWidth="358.0" textFill="#5eb256">
+         <font>
+            <Font name="Arial Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="71.0" layoutY="237.0" text="Vehicle Reg No :">
+         <font>
+            <Font name="Arial Bold" size="25.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbVehicleRegNo" layoutX="271.0" layoutY="240.0" onAction="#cmbVehicleRegNoOnAction" prefHeight="27.0" prefWidth="92.0" />
+      <Button layoutX="913.0" layoutY="241.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="27.0" prefWidth="51.0" text="Add" />
+      <TextField fx:id="txtVehicleType" layoutX="376.0" layoutY="241.0" prefHeight="27.0" prefWidth="198.0" promptText="Vehicle Type" />
+      <TextField fx:id="txtPricePerDay" layoutX="588.0" layoutY="241.0" prefHeight="27.0" prefWidth="135.0" promptText="Price Per Day" />
+      <TextField fx:id="txtQtyOnHand" layoutX="739.0" layoutY="241.0" prefHeight="27.0" prefWidth="92.0" promptText="Qty On Hand" />
+      <TableView fx:id="tbl" layoutX="215.0" layoutY="336.0" prefHeight="200.0" prefWidth="633.0">
+        <columns>
+          <TableColumn fx:id="colBookingId" prefWidth="165.0" text="Booking ID" />
+          <TableColumn fx:id="colVehicleRegNo" minWidth="0.0" prefWidth="206.0" text="Vehicle Registration Number" />
+            <TableColumn fx:id="colQty" prefWidth="153.0" text="Vehicle Quantity" />
+            <TableColumn fx:id="colDiscount" prefWidth="108.0" text="Discount" />
+        </columns>
+      </TableView>
+      <Button layoutX="827.0" layoutY="588.0" mnemonicParsing="false" onAction="#btnCompleteBookingOnAction" text="Complete Booking">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtGetQty" layoutX="846.0" layoutY="241.0" prefHeight="27.0" prefWidth="51.0" />
+   </children>
+</AnchorPane>
